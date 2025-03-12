@@ -19,7 +19,7 @@ useHead({
             <div class="text-center mb-5 ">
                 <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4">
                     My Projects</h2>
-                <div class="w-20 h-1 bg-white/50 mx-auto rounded-full"></div>
+                    <div class="w-20 h-1 bg-pink-500/30 mx-auto rounded-full mt-4"></div>
             </div>
 
             <Project :limit="3" />

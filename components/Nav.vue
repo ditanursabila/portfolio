@@ -32,7 +32,7 @@ onMounted(() => {
 onBeforeMount(() => {
     initDropdowns();
 });
-
+ 
 onBeforeUnmount(() => {
     window.removeEventListener("scroll", handleScroll);
 });
@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
 
             <div class="w-full md:block md:w-auto" :class="[isMobileMenuOpen ? 'block' : 'hidden']"
                 id="navbar-dropdown">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-pink-600/20 md:bg-transparent
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-pink-400/95 md:bg-transparent
                            md:flex-row md:space-x-8 md:mt-0 md:border-0 backdrop-blur-md md:backdrop-blur-none">
                     <li>
                         <nuxt-link to="/" class="block py-3 px-4 rounded transition-all duration-300" :class="[
