@@ -102,7 +102,7 @@
                     </p>
                 </div>
                 <div class="text-center md:text-right">
-                    <a href="https://drive.google.com/file/d/1LXXJs2Z4OFPc2EnwoU_8fLn1jUSaImzS/view?usp=sharing"
+                    <a href="public/resume.pdf"
                         target="_blank"
                         class="inline-flex items-center px-4 py-2 border border-white text-sm font-medium rounded-md text-white hover:bg-white hover:text-pink-400 transition">
                         Resume
