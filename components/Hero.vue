@@ -3,12 +3,12 @@ export default {
     data() {
         return {
             shapes: [
-                { color: 'bg-pink-300' },
-                { color: 'bg-pink-500' },
-                { color: 'bg-pink-600' },
-                { color: 'bg-pink-700' },
-                { color: 'bg-purple-400' },
-                { color: 'bg-purple-500' }
+                { color: 'bg-secondary' },
+                { color: 'bg-secondary' },
+                { color: 'bg-secondary' },
+                { color: 'bg-secondary' },
+                { color: 'bg-neutral-content' },
+                { color: 'bg-accent' }
             ],
             cubeRotation: {
                 rotateX: 0,
@@ -16,9 +16,9 @@ export default {
                 rotateZ: 0
             },
             colors: [
-                'bg-pink-400', 'bg-pink-500', 'bg-pink-600', 'bg-pink-700',
-                'bg-purple-400', 'bg-purple-500', 'bg-purple-600', 'bg-purple-700',
-                'bg-blue-400', 'bg-teal-400', 'bg-indigo-400'
+                'bg-secondary', 'bg-secondary', 'bg-secondary', 'bg-secondary',
+                'bg-neutral-content', 'bg-purple-500', 'bg-neutral-content', 'bg-accent',
+                'bg-primary', 'bg-primary', 'bg-primary'
             ]
         };
     },
@@ -37,9 +37,8 @@ export default {
 };
 </script>
 
-<template>
-    <div
-        class="bg-gradient-to-br from-rose-200 via-pink-300 to-pink-400 w-full min-h-screen flex items-center justify-center py-8">
+<template data-theme="cupcake">
+    <div class="bg-base-300 w-full min-h-screen flex items-center justify-center py-8">
         <div
             class="border border-pink-600 backdrop-blur-lg rounded-lg shadow-xl mt-10  w-11/12 md:w-10/12 py-8 sm:py-15 md:py-12 flex items-center justify-center px-4  sm:px-6 md:px-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
@@ -51,7 +50,7 @@ export default {
                         <span>Dita Nur Sabila</span>
                     </h1>
                     <p class="text-xl md:text-2xl text-gray-800 text-center md:text-left">
-                        Software Engineer
+                        IT Project Manager
                     </p>
                     <div class="flex space-x-4">
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="py-20 px-4 bg-pink-300 relative overflow-hidden">
+    <div class="py-20 px-4 bg-secondary relative overflow-hidden">
         <div
             class="absolute top-0 left-0 w-48 md:w-72 h-48 md:h-72 bg-pink-200/30 rounded-full blur-2xl md:blur-3xl -translate-x-1/2 -translate-y-1/2 animate-pulse">
         </div>
@@ -18,7 +18,7 @@
                         <div class="space-y-4">
                             <div class="flex justify-start">
                                 <div
-                                    class="chat-bubble max-w-[85%] backdrop-blur-sm bg-white/60 p-4 md:p-6 rounded-2xl rounded-tl-none shadow-lg border border-white/50">
+                                    class="chat-bubble max-w-[85%] backdrop-blur-sm bg-base-200 p-4 md:p-6 rounded-2xl rounded-tl-none shadow-lg border border-white/50">
                                     <p class="text-sm md:text-lg text-gray-700 leading-relaxed">
                                         Hello! 👋 I'm <span class="font-semibold text-pink-600">Dita Nur Sabila</span>
                                     </p>
@@ -26,11 +26,10 @@
                             </div>
                             <div class="flex justify-start">
                                 <div
-                                    class="chat-bubble max-w-[85%] backdrop-blur-sm bg-white/60 p-4 md:p-6 rounded-2xl rounded-tl-none shadow-lg border border-white/50">
+                                    class="chat-bubble max-w-[85%] backdrop-blur-sm bg-base-200 p-4 md:p-6 rounded-2xl rounded-tl-none shadow-lg border border-white/50">
                                     <p class=" text-sm md:text-lg text-gray-700 leading-relaxed">
-                                        I'm a passionate Software Engineer with over 3 years of experience in web
-                                        development, specializing in creating beautiful and user-friendly web
-                                        applications. 💻✨
+                                        I am an IT Project Manager and I am also good at Frontend Web Developer and
+                                        UI/UX Design with more than 3 years of experience.💻✨
                                     </p>
                                 </div>
                             </div>

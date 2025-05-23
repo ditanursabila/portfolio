@@ -70,7 +70,7 @@ onMounted(() => {
          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="group" v-for="(projek, i) in project" :key="i">
                <div
-                  class="relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-white/20 h-full flex flex-col">
+                  class="relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-secondary h-full flex flex-col">
                   <div class="relative h-48 sm:h-56 md:h-64 p-3 rounded-xl overflow-hidden">
                      <div :style="{
                         backgroundImage: `url(${projek.img})`,
@@ -97,7 +97,7 @@ onMounted(() => {
                      <div class="flex items-center justify-between pt-4 border-t border-white/10">
                         <div class="flex flex-wrap justify-start gap-2 mb-4">
                            <span v-for="(tech, i) in projek.tech" :key="i"
-                              class="px-2 md:px-3 py-1 text-xs rounded-full bg-white/20 text-gray-600 hover:bg-white/30 transition-colors">
+                              class="px-2 md:px-3 py-1 text-xs rounded-full bg-base-100 text-neutral hover:bg-secondary transition-colors">
                               {{ tech }}
                            </span>
                         </div>

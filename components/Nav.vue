@@ -32,13 +32,13 @@ onMounted(() => {
 onBeforeMount(() => {
     initDropdowns();
 });
- 
+
 onBeforeUnmount(() => {
     window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
-<template>
+<template data-theme="cupcake">
     <nav :class="['fixed top-0 w-full z-50 transition-all duration-300 border-gray-200',
         scrolled ? 'backdrop-blur-lg shadow-md bg-pink-600/20' : 'bg-transparent']">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -86,6 +86,15 @@ onBeforeUnmount(() => {
                             activeSection === 'project' ? 'text-gray-800 font-bold' : 'text-gray-800 hover:text-black'
                         ]">
                             Project
+                        </nuxt-link>
+                    </li>
+
+                    <li>
+                        <nuxt-link to="/sertifikat" class="block py-3 px-4 rounded transition-all duration-300" :class="[
+                            'hover:bg-pink-500/20 md:hover:bg-transparent md:border-0 md:p-0',
+                            activeSection === 'project' ? 'text-gray-800 font-bold' : 'text-gray-800 hover:text-black'
+                        ]">
+                            Certificates
                         </nuxt-link>
                     </li>
 

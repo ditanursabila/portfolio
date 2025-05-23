@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div data-theme="cupcake">
         <Nav />
         <div>
             <slot />

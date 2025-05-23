@@ -13,5 +13,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('preline/plugin', 'flowbite/plugin'),],
+  plugins: [require('daisyui'),],
+  daisyui: {
+    themes: [ "cupcake"],
+  },
 }
