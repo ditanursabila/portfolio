@@ -1,5 +1,6 @@
 <template>
     <footer class="bg-base-300 border-t border-neutral-content">
+    <footer class="bg-base-300 border-t border-neutral-content">
         <div class="max-w-[85rem] px-4 py-12 mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
                 <div class="col-span-1 text-center md:text-left">
