@@ -62,7 +62,7 @@ const sendEmail = async (e) => {
 </script>
 
 <template>
-    <div class="flex items-center justify-center py-8 bg-gradient-to-br from-pink-300 via-pink-300 to-pink-300">
+    <div class="flex items-center justify-center py-8 bg-base-300">
         <div class="max-w-6xl mt-20 mb-20 w-full mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4">

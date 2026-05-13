@@ -1,0 +1,13 @@
+<template>
+    <div class="bg-secondary w-full flex items-center justify-center py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-neutral mt-20 mb-4">
+                    My Certificates</h2>
+                <div class="w-20 h-1 bg-pink-500/30 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <Sertifikat />
+        </div>
+    </div>
+</template>

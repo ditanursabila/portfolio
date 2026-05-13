@@ -2,6 +2,31 @@
 const supabase = useSupabaseClient();
 const project = ref([]);
 const loading = ref(true);
+const activeTab = ref('all');
+
+const filteredProjects = computed(() => {
+   let filtered = project.value;
+   
+   if (activeTab.value !== 'all') {
+      filtered = project.value.filter(p => {
+         // Supabase menggunakan 'Category' dengan kapital 'C'
+         // Ubah ke huruf kecil dan hilangkan spasi agar pengecekan lebih kebal terhadap salah ketik (case-insensitive)
+         const cat = (p.Category || '').toLowerCase().replace(/[^a-z0-9]/g, ''); 
+         
+         if (activeTab.value === 'pm') return cat.includes('pm') || cat.includes('projectmanagement');
+         if (activeTab.value === 'coding') return cat.includes('coding') || cat.includes('development') || cat.includes('web') || cat.includes('fe') || cat.includes('frontend');
+         if (activeTab.value === 'uiux') return cat.includes('uiux') || cat.includes('ui') || cat.includes('ux');
+         
+         return false;
+      });
+   }
+   
+   if (props.limit) {
+      return filtered.slice(0, props.limit);
+   }
+   
+   return filtered;
+});
 
 
 const props = defineProps({
@@ -15,11 +40,7 @@ const getProject = async () => {
    loading.value = true;
    let query = supabase
       .from("project")
-      .select(`id, name, link, img, tech, description`)
-
-   if (props.limit) {
-      query = query.limit(props.limit)
-   }
+      .select(`id, name, link, img, tech, description, Category`)
 
    const { data, error } = await query
 
@@ -39,6 +60,22 @@ onMounted(() => {
 
 <template>
    <div>
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+         <button @click="activeTab = 'all'" :class="['px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all duration-300', activeTab === 'all' ? 'bg-pink-600 text-white shadow-lg shadow-pink-500/30' : 'bg-white/40 text-gray-700 hover:bg-white/60 backdrop-blur-sm border border-white/50']">
+            All Projects
+         </button>
+         <button @click="activeTab = 'pm'" :class="['px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all duration-300', activeTab === 'pm' ? 'bg-pink-600 text-white shadow-lg shadow-pink-500/30' : 'bg-white/40 text-gray-700 hover:bg-white/60 backdrop-blur-sm border border-white/50']">
+            Project Management
+         </button>
+         <button @click="activeTab = 'coding'" :class="['px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all duration-300', activeTab === 'coding' ? 'bg-pink-600 text-white shadow-lg shadow-pink-500/30' : 'bg-white/40 text-gray-700 hover:bg-white/60 backdrop-blur-sm border border-white/50']">
+            Web Development
+         </button>
+         <button @click="activeTab = 'uiux'" :class="['px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all duration-300', activeTab === 'uiux' ? 'bg-pink-600 text-white shadow-lg shadow-pink-500/30' : 'bg-white/40 text-gray-700 hover:bg-white/60 backdrop-blur-sm border border-white/50']">
+            UI/UX Design
+         </button>
+      </div>
+
       <div v-if="loading">
          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div v-for="i in 6" :key="i"
@@ -67,10 +104,13 @@ onMounted(() => {
       </div>
 
       <div v-else>
-         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="group" v-for="(projek, i) in project" :key="i">
+         <div v-if="filteredProjects.length === 0" class="text-center py-10">
+            <p class="text-lg text-gray-500">No projects found for this category yet.</p>
+         </div>
+         <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group" v-for="(projek, i) in filteredProjects" :key="i">
                <div
-                  class="relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-white/20 h-full flex flex-col">
+                  class="relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-secondary h-full flex flex-col">
                   <div class="relative h-48 sm:h-56 md:h-64 p-3 rounded-xl overflow-hidden">
                      <div :style="{
                         backgroundImage: `url(${projek.img})`,
@@ -97,7 +137,7 @@ onMounted(() => {
                      <div class="flex items-center justify-between pt-4 border-t border-white/10">
                         <div class="flex flex-wrap justify-start gap-2 mb-4">
                            <span v-for="(tech, i) in projek.tech" :key="i"
-                              class="px-2 md:px-3 py-1 text-xs rounded-full bg-white/20 text-gray-600 hover:bg-white/30 transition-colors">
+                              class="px-2 md:px-3 py-1 text-xs rounded-full bg-base-100 text-neutral hover:bg-secondary transition-colors">
                               {{ tech }}
                            </span>
                         </div>
