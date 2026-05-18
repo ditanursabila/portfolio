@@ -11,10 +11,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div class="order-2  space-y-6 md:space-y-8">
                     <div class="space-y-4 md:space-y-6">
-                        <h1
+                        <h2
                             class="text-2xl md:text-4xl font-bold bg-gradient-to-r from-pink-600 to-violet-600 bg-clip-text text-transparent animate-gradient-x tracking-tight">
                             About Me
-                        </h1>
+                        </h2>
                         <div class="space-y-4">
                             <div class="flex justify-start">
                                 <div
@@ -88,7 +88,7 @@
                         <div class="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto relative">
                             <div class="relative z-10 overflow-hidden bg-white/80 backdrop-blur-sm rounded-2xl md:rounded-3xl shadow-lg
                                 transition-all duration-300 group-hover:shadow-xl border-2 border-white/50">
-                                <img src="assets/img/dita.jpeg" alt="Profile Picture" class="w-full h-full object-cover object-center transition-transform duration-300 
+                                <img src="assets/img/dita.jpeg" alt="Dita Nur Sabila Profile Picture" class="w-full h-full object-cover object-center transition-transform duration-300 
                                     group-hover:scale-105" />
                             </div>
                             <div class="absolute inset-0 bg-gradient-to-tr from-pink-200 to-violet-200 rounded-2xl md:rounded-3xl 

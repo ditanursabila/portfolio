@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   plugins: ["~/plugins/preline.client.ts",
-    // { src: '~/plugins/aos.ts', mode: 'client', ssr: false }
   ],
   postcss: {
     plugins: {

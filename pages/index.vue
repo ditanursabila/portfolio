@@ -1,13 +1,34 @@
 <script setup>
 useHead({
-    title: "Ditanrs",
+    title: "Dita Nur Sabila | Portfolio",
     meta: [
         {
             name: "description",
-            content: "ditanrs",
+            content: "Portfolio Dita Nur Sabila, seorang Web Developer dan Project Manager yang berpengalaman dalam membangun aplikasi modern dan mengelola proyek IT.",
         },
+        {
+            name: "keywords",
+            content: "dita nur sabila, dita nursabila, ditanursabila, portfolio dita nur sabila, web developer, project manager, UI/UX design, sistem analyst",
+        }
     ],
-});
+    script: [
+        {
+            type: "application/ld+json",
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Dita Nur Sabila",
+                "url": "https://ditanrs.my.id",
+                "jobTitle": "Project Manager, Frontend Developer & UI/UX Designer  ",
+                "sameAs": [
+                    "https://github.com/ditanursabila",
+                    "https://www.linkedin.com/in/ditanrs/",
+                    "https://www.instagram.com/ditanrsabilaa/",
+                    "https://www.youtube.com/@ditanursabila"
+                ]
+            })
+        }
+    ]});
 </script>
 
 <template>

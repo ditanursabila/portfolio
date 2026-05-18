@@ -44,16 +44,13 @@
                             <span class="text-gray-800">Project Manager</span>
                         </li>
                         <li>
-                            <span class="text-gray-800">Web Developer</span>
-                        </li>
-                        <li>
                             <span class="text-gray-800">Frontend Web Developer</span>
                         </li>
                         <li>
                             <span class="text-gray-800">UI/UX Design</span>
                         </li>
                         <li>
-                            <span class="text-gray-800">Social Media Content Creator</span>
+                            <span class="text-gray-800">Social Media Specialist</span>
                         </li>
                     </ul>
                 </div>

@@ -43,9 +43,9 @@ export default {
             class="backdrop-blur-lg rounded-lg shadow-xl mt-10 w-11/12 md:w-10/12 py-8 sm:py-15 md:py-12 flex items-center justify-center px-4 sm:px-6 md:px-10 bg-white/40 border border-white/50">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
                 <div class="flex flex-col items-center md:items-start space-y-4 md:space-y-6">
-                    <h1 class="text-3xl sm:text-4xl font-bold">
+                    <h2 class="text-3xl sm:text-4xl font-bold">
                         <span class="text-loving-dark">Hello, I'm</span>
-                    </h1>
+                    </h2>
                     <h1 class="text-4xl sm:text-5xl font-extrabold text-black pb-1">
                         <span>Dita Nur Sabila</span>
                     </h1>

@@ -10,12 +10,7 @@ const formData = ref({
     email: '',
     message: ''
 })
-
-
-emailjs.init("g9IzmOGUt_iqe_2Tm")
-
-const sendEmail = async (e) => {
-    e.preventDefault()
+const sendEmail = async () => {
     loading.value = true
 
     try {
@@ -28,7 +23,10 @@ const sendEmail = async (e) => {
         await emailjs.send(
             'service_ej5ilzp',
             'template_n0l63ve',
-            templateParams
+            templateParams,
+            {
+                publicKey: 'g9IzmOGUt_iqe_2Tm'
+            }
         )
 
         formData.value = {
@@ -51,7 +49,7 @@ const sendEmail = async (e) => {
         await Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Pesan kamu tidak terkirim. Silahkan coba lagi!',
+            text: 'Gagal: ' + (error?.text || error?.message || 'Terjadi kesalahan sistem.'),
             confirmButtonColor: '#ec4899',
             confirmButtonText: 'OK'
         })
@@ -70,7 +68,7 @@ const sendEmail = async (e) => {
                 <div class="w-20 h-1 bg-pink-500/30 mx-auto rounded-full mt-4"></div>
             </div>
 
-            <form ref="form" @submit="sendEmail" class="space-y-6">
+            <form ref="form" @submit.prevent="sendEmail" class="space-y-6">
                 <div class="grid gap-6 md:gap-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>

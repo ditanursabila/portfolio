@@ -19,7 +19,7 @@ const skillCategories = [
         colorClass: 'group-hover:text-amber-600 group-hover:bg-amber-50 border-amber-100'
     },
     {
-        title: 'Social Media',
+        title: 'Social Media Specialist',
         icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>`,
         skills: ['Canva', 'CapCut', 'Content Strategy', 'Copywriting', 'Creative Direction'],
         colorClass: 'group-hover:text-purple-600 group-hover:bg-purple-50 border-purple-100'
@@ -46,7 +46,6 @@ const skillCategories = [
                     :key="index"
                     class="group relative bg-white rounded-[2rem] p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col"
                 >
-                    <!-- Minimalist background hover transition -->
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                     
                     <div class="flex items-center space-x-4 mb-8">
@@ -73,5 +72,4 @@ const skillCategories = [
 </template>
 
 <style scoped>
-/* Crisp and professional typography adjustments if needed */
 </style>
