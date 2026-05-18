@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/supabase"],
+  modules: ["@nuxtjs/supabase", "@nuxtjs/sitemap"],
   supabase: { redirect: false },
+  site: {
+    url: 'https://ditanrs.my.id',
+    name: 'Dita Nur Sabila',
+  },
 })
