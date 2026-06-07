@@ -7,7 +7,7 @@
                         <span class="text-2xl font-bold text-pink-600">Dita Nur Sabila</span>
                     </a>
                     <p class="text-gray-800 leading-relaxed mb-4">
-                        Hello, I am Dita Nur Sabila, a dedicated IT Project Manager with a strong technical background in Frontend Development and UI/UX Design, committed to delivering high-quality digital products.
+                        I’m Dita Nur Sabila, experienced in digital product development across frontend, UI/UX, and project coordination. I help translate requirements into structured solutions and support smooth development processes. Currently, I’m growing in digital product and project coordination.
                     </p>
                 </div>
 
@@ -42,6 +42,10 @@
                     <ul class="space-y-3">
                         <li>
                             <span class="text-gray-800">Project Manager</span>
+                        </li>
+                        <li>
+                            <span class="text-gray-800">Sistem Analyst
+                            </span>
                         </li>
                         <li>
                             <span class="text-gray-800">Frontend Web Developer</span>
@@ -114,7 +118,7 @@
                     </p>
                 </div>
                 <div class="text-center md:text-right">
-                    <a href="resume.pdf" target="_blank"
+                    <a href="Ditanursabila_CV.pdf" target="_blank"
                         class="inline-flex items-center px-4 py-2 border border-pink-600 text-sm font-medium rounded-md text-pink-600 hover:bg-white hover:text-pink-600 transition">
                         Resume
                     </a>

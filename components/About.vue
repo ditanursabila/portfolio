@@ -28,7 +28,7 @@
                                 <div
                                     class="chat-bubble max-w-[85%] backdrop-blur-sm bg-base-200 p-4 md:p-6 rounded-2xl rounded-tl-none shadow-lg border border-white/50">
                                     <p class=" text-sm md:text-lg text-gray-700 leading-relaxed">
-                                        I am a dedicated IT Project Manager with over 3 years of experience in leading cross-functional teams to deliver impactful digital solutions. I also bring strong technical expertise in Frontend Development and UI/UX Design to bridge the gap between business goals and technical execution.
+                                       I have over 1 year of experience in digital product development, with involvement in team coordination, system analysis, and UI/UX design. I also have a background in Frontend Development, which helps me bridge business needs with technical implementation effectively.
                                     </p>
                                 </div>
                             </div>
